@@ -1,0 +1,19 @@
+= AsciiDoc 离线手册
+Hanjingxue Boling <bolingh@outlook.com>
+v0.1-alpha, 2023-01-17
+
+== 项目产生的原因
+
+WARNING: 由于本项目属于下游项目，必然滞后于官方手册的更新进度。有异议的地方以官方手册为准。
+
+由于官方并未提供切实可用的离线文档或用户手册。所以我创建了此项目，以方便我个人使用 AsciiDoc。
+
+本项目包含了一些基于 AsciiDoc 书写而成的，由英文译为中文的用户手册页，可用于离线查阅。
+
+== 如何使用
+
+本文档的绝大部分文件是 AsciiDoc 文档文件，建议使用 link:https://code.visualstudio.com/[VS code] 和 link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc] 阅读本手册。
+
+== 许可证
+
+本手册页项目基于 link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0] 进行授权分发。
