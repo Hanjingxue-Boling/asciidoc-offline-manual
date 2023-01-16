@@ -1,0 +1,20 @@
+= 中英术语对照表
+
+TIP: 该列表是乱序的，建议使用 vscode 内置的搜索功能检索词汇。
+
+* Paragraphs - 段落
+* Lead paragraph - 前导段落
+* Literal paragraph - 文字段落
+* Hard line breaks - 硬换行符
+* Text formatting - 文本格式
+* Superscript - 上标
+* subscript - 下标
+* bold - 粗体
+* italic - 斜体
+* monospace - 等宽
+* Highlight - 高亮
+* underline - 下划线
+* strikethrough - 删除线
+* custom role - 自定义角色
+* Autolinks - 自动链接
+* macro - 宏

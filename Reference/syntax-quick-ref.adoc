@@ -1,0 +1,95 @@
+= AsciiDoc 语法快速参考
+:toc: auto
+
+IMPORTANT:  本页的例子展示了由内置 HTML 转换器产生的输出。AsciiDoc 转换器在生成其他输出格式，如 PDF、EPUB 和 DocBook 时，预计会产生互补的输出。
+
+== 段落
+
+在 AsciiDoc 中段落（Paragraphs）不需要特殊标记。一个段落是由一个或多个连续的文本行定义的。段落内的换行符不会被显示。例如：
+
+ 这是第一行文本
+ 这是第二行文本
+
+如果没有插入换行符号或空行，应当得到如下的渲染效果：
+
+这是第一行文本
+这是第二行文本
+
+如果你在一行文字前缩进至少一格，那么它会以固定宽度（通常为等宽）字体显示。
+
+ 这些文字段落（Literal paragraph）是预先格式化的（即，如源代码中的格式）。
+ 空格和换行符会得到保留，就 像 这 句 话 中 的 一 样。
+
+你可以使用 `[%hardbreaks]` 或者空格与 `+` 组合在一起的硬换行符（Hard line breaks）进行换行。例如：
+
+[%hardbreaks]
+红宝石是红色的。
+爪哇是黑色的。
+
+今天会下雨 +
+明天会晴天
+
+如果将 `[.lead]` 加到一段文件上面，此此文本将被设置为前导段落（即更大的字体）。
+
+[.lead]
+这是一段演示用的前导段落。
+
+== 文本格式
+
+AsciiDoc 支持多种文本格式（Text formatting）。
+
+*这是粗体*
+
+要在文本内实现**粗体**，需要同时使用两个星号。斜体、等宽文本、下划线、删除线等同理。
+
+_这是斜体_
+
+*_这是斜体加粗_*，这是局部斜体**_加粗_**。
+
+`这是等宽文本`
+
+`*_对等宽文本进行斜体加粗_*`
+
+#这是高亮文本#
+
+[.underline]#这是下划线#
+
+[.line-through]#这是删除线#
+
+[.myrole]##自定义角色##（custom role）由主题完成。
+
+基础文本^这是上标文本^
+
+基础文本~这是下标文本~
+
+== 链接
+
+https://asciidoctor.org - AsciiDoc 可以自动识别 HTTPS 协议链接
+
+https://asciidoctor.org[Asciidoctor]
+
+devel@discuss.example.org - 邮件列表也可自动识别
+
+mailto:devel@discuss.example.org[Discuss] - 一个典型的 mailto 链接宏
+
+mailto:join@discuss.example.org[这是链接的描述文本]
+
+带有属性的链接宏：
+
+* https://chat.asciidoc.org[Discuss AsciiDoc,role=external,window=_blank]
+* https://chat.asciidoc.org[Discuss AsciiDoc^]
+
+以上两个链接点击后都会在新窗口打开链接。
+
+IMPORTANT: 当目标以 `https:` 等 URL 方案开头时，不需要 link: 宏前缀。URL 方案充当隐式宏前缀。
+
+CAUTION: 如果链接文本包含逗号并且文本后跟一个或多个命名属性，则必须用双引号（`++`）将文本括起来。 否则，文本将在逗号处被截断（其余文本将被拉入属性解析）。
+
+link:++https://example.org/?q=[a b]++[带有特殊字符的 URL]
+
+这是指向特定文件的link:../index.adoc[链接]
+
+使用 Windows UNC 路径的链接：
+
+ link:\\server\share\whitepaper.pdf[Whitepaper]
+

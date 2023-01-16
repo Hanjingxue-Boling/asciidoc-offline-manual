@@ -1,6 +1,6 @@
 = AsciiDoc 离线手册
 Hanjingxue Boling <bolingh@outlook.com>
-v0.1-alpha, 2023-01-17
+v0.2-alpha, 2023-01-17
 
 == 项目产生的原因
 
@@ -13,6 +13,8 @@ WARNING: 由于本项目属于下游项目，必然滞后于官方手册的更�
 == 如何使用
 
 本文档的绝大部分文件是 AsciiDoc 文档文件，建议使用 link:https://code.visualstudio.com/[VS code] 和 link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc] 阅读本手册。
+
+更多内容另见：link:index.adoc[目录]
 
 == 许可证
 
