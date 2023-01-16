@@ -16,6 +16,8 @@ WARNING: 由于本项目属于下游项目，必然滞后于官方手册的更�
 
 更多内容另见：link:index.adoc[目录]
 
+我并不建议使用 GitHub 的在线预览功能浏览本文档，虽然 asciidoc 也是 GitHub 支持的标记语言之一，但是有些样式 GitHub 简单的在线预览无法实现，而且部分样例将以源码的形式进行举例。
+
 == 许可证
 
 本手册页项目基于 link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0] 进行授权分发。
