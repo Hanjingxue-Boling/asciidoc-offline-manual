@@ -1,0 +1,5 @@
+= 许可证清单
+
+如果没有特别声明，本项目的全部文件将以 link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0] 进行授权分发。
+
+== 例外情况

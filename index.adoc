@@ -1,5 +1,4 @@
 = 目录
-:relfilesuffix: /
 
 == 参考
 
@@ -8,4 +7,12 @@ link:Reference/syntax-quick-ref.adoc[AsciiDoc 语法快速参考]
 link:Reference/en-zh.adoc[中英术语对照表]
 
 link:Reference/Glossary.adoc[术语表]
+
+== 根目录
+
+link:readme.adoc[README]
+
+link:LICENSE[CC-BY-SA 4.0 许可证副本]
+
+link:license-list.adoc[许可证清单]
 

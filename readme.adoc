@@ -21,3 +21,5 @@ WARNING: 由于本项目属于下游项目，必然滞后于官方手册的更�
 == 许可证
 
 本手册页项目基于 link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0] 进行授权分发。
+
+详细说明另见 link:license-list.adoc[许可证清单]
