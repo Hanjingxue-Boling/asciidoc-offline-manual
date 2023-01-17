@@ -1,5 +1,6 @@
 = AsciiDoc 语法快速参考
 :toc: auto
+:imagesdir: images
 
 IMPORTANT:  本页的例子展示了由内置 HTML 转换器产生的输出。AsciiDoc 转换器在生成其他输出格式，如 PDF、EPUB 和 DocBook 时，预计会产生互补的输出。
 
@@ -312,4 +313,134 @@ list continuation:: 单独一行的加号（`+`）
 |===
 
 == 图像
+
+推荐在文档标题下，添加一个 `imagesdir` 属性条目，并在文档的同目录下新建一个专门用于存储图片的文件夹，使用相对路径来显示图像，例如：
+
+ = 文档标题
+ :imagesdir: images
+
+[comment]
+--
+你可以使用 link:https://docs.asciidoctor.org/asciidoc/latest/macros/images-directory/[imagesdir 属性] 来避免在每个图像宏中对图像的公共路径进行硬编码。此属性的值可以是绝对路径、相对路径或基本 URL。如果图像目标是相对路径，则属性的值是前置的（即，它是相对于 imagesdir 属性的值解析的）。如果图像目标是 URL 或绝对路径，则不会预先添加属性值。
+--
+
+image::geko.jpg[Geko!]
+
+.一只可爱的蜥蜴🦎
+[#img-geko,caption=例图 1:,link=https://www.flickr.com/photos/fotokobra/15156978780]
+image::geko.jpg[Geko!,120,80]
+
+`image::` 表示一个块图像（也被称为 __figure__），如果要把图片插入一行文本中，你可以使用 ``image:``。
+
+例如，这是一张可爱的蜥蜴🦎的 image:geko.jpg[照片,24,16]。
+
+.具有定位作用的内联图像宏
+image:geko.jpg[Geko!,120,80,role=right] 右侧有一张可爱的蜥蜴🦎照片。
+
+== 音频
+
+.块音频宏
+ audio::ocean-waves.wav[]
+
+ audio::ocean-waves.wav[start=60,opts=autoplay]
+
+== 视频
+
+.块视频宏
+  video::video-file.mp4[]
+
+  video::video-file.mp4[width=640,start=60,opts=autoplay]
+
+.嵌入式的 YouTube 与 Vimeo 视频
+ video::RvRhUHTV_8k[youtube]
+
+ video::67480300[vimeo]
+
+== 文本文字和源代码
+
+你可以使用反引号包围的一对加号来输出内联等宽文字，如：`+http://127.0.0.1:7890+`
+
+ 将行缩进一个空  格以创建文字行。它将按照文本的原始样貌 进     行 渲 染。
+
+你可以使用一对由 `.` 构成的块输出文本文字。如：
+
+.示例
+....
+这是一个文本文字段落。http://127.0.0.1:7890.
+....
+
+.带有语法高亮的源码块
+[source,ruby]
+----
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+----
+
+IMPORTANT: 您必须通过在文档标头、CLI 或 API 中设置 `source-highlighter` 属性来启用源码高亮显示。 +
+例如：`+:source-highlighter: rouge+`
+
+.带有调用的源码块
+[source,ruby]
+----
+require 'sinatra' // <1>
+
+get '/hi' do // <2>
+  "Hello World!" // <3>
+end
+----
+<1> 导入库
+<2> URL 映射
+<3> HTTP 响应正文
+
+.包含其他文件的源码块
+[,ruby]
+----
+include::assets/app.rb[]
+----
+
+.从相对于源目录的文件中包含的源块内容
+ :sourcedir: src/main/java
+ 
+ [source,java]
+ ----
+ include::{sourcedir}/org/asciidoctor/Asciidoctor.java[]
+ ----
+
+.源段落（不要有空行）
+[source,xml]
+<meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+这是普通的演示文本
+
+== 告诫
+
+NOTE: 这是一个说明段落
+
+TIP: 这是一个建议，提示段落
+
+CAUTION: 这是一个注意信息段落。
+
+WARNING: 这是一个警告信息段落
+
+IMPORTANT: 这是一个重要信息段落。
+
+.告诫块（Admonition block）的标题
+[NOTE]
+====
+
+这是一个示例告诫块
+
+.示例列表
+- 项目1
+- 项目2
+- 项目3
+
+一个示例文本段落。
+====
+
+== 更多的分隔块
 

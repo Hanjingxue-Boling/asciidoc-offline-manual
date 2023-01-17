@@ -18,8 +18,14 @@ WARNING: 由于本项目属于下游项目，必然滞后于官方手册的更�
 
 我并不建议使用 GitHub 的在线预览功能浏览本文档，虽然 AsciiDoc 也是 GitHub 支持的标记语言之一，但是有些样式 GitHub 简单的在线预览无法实现，而且部分样例将以源码的形式进行举例。
 
-== 许可证
+== 其他
+
+=== 排版样式
+
+本文采用 link:https://github.com/mzlogin/chinese-copywriting-guidelines[《中文文案排版指北》] 作为排版的参考指南。
+
+=== 许可证
+
+TIP: 详细说明另见 link:license-list.adoc[许可证清单]
 
 本手册页项目基于 link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0] 进行授权分发。
-
-详细说明另见 link:license-list.adoc[许可证清单]

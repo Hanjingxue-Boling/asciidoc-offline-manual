@@ -3,3 +3,7 @@
 如果没有特别声明，本项目的全部文件将以 link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0] 进行授权分发。
 
 == 例外情况
+
+. image:./Reference/images/geko.jpg[geko,240,160]
++
+由 link:https://www.flickr.com/photos/fotokobra/[Hans Nater] 基于 link:https://creativecommons.org/licenses/by-nd/2.0/[CC-BY-SA 2.0] 进行授权使用。
