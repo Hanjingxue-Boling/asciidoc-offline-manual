@@ -34,6 +34,7 @@ IMPORTANT:  本页的例子展示了由内置 HTML 转换器产生的输出。As
 [.lead]
 这是一段演示用的前导段落。
 
+[#Text-formatting]
 == 文本格式
 
 AsciiDoc 支持多种文本格式（Text formatting）。
@@ -89,7 +90,226 @@ link:++https://example.org/?q=[a b]++[带有特殊字符的 URL]
 
 这是指向特定文件的link:../index.adoc[链接]
 
+TIP: 为了方便跨平台使用，建议避免使用 Windows UNC 路径。
+
 使用 Windows UNC 路径的链接：
 
  link:\\server\share\whitepaper.pdf[Whitepaper]
+
+[[bookmark-a]]内联锚点（Inline anchors）使任意内容可引用。
+
+[#bookmark-b]#内联锚点可以应用于像这样的短语。#
+
+anchor:bookmark-c[]使用交叉引用链接到此位置。
+
+[[bookmark-d,last paragraph]]xreflabel 属性将用作交叉引用链接中的链接文本。
+
+例如，参考<<Text-formatting,文本格式>>，查看如何对文本进行格式化。
+
+例如，文档间交叉引用：
+
+link:en-zh.adoc#example-node[测试节点]
+
+== 文档标题
+
+文档标题（Document header）是可选的。文档标题不能包含任何空行，并且必须与内容至少用一个空行分隔。
+
+例如：
+
+ = 示例文档标题
+
+ 这是一段正文段落……
+
+你可以在文档标题后附上作者和作者的邮件地址，并使用 `;` 分隔不同的作者。如：
+
+ = 示例文档标题
+ 作者1 <author@email.org>; 作者2 <author2@email.org>
+
+ 这是一段正文段落……
+
+你也可以在作者行后再新增一行版本行，**但是不能在没有作者行的情况下设置版本行**：
+
+ = 示例文档标题
+ 作者 <author@email.org>
+ v1.0, 2023-01-17
+
+ 这是一段正文段落……
+
+你还可以在此之后叠加更多的属性条目：
+
+ = 示例文档标题
+ 作者 <author@email.org>
+ v1.0, 2023-01-17
+ :toc:
+ :homepage: https://example.org
+
+ 这是一段正文段落……
+
+== 章节标题
+
+AsciiDoc 文档文件的默认文档属性（`doctype`）是文章（`article`），此时，文档只能存在唯一的，层级（Level）为 0 的章节标题（`Section Title`），即文档标题。
+
+[source]
+--
+= 文档标题 (Level 0)
+
+== Level 1 章节标题
+
+=== Level 2 章节标题
+
+==== Level 3 章节标题
+
+===== Level 4 章节标题
+
+====== Level 5 章节标题
+
+== 另一个 Level 1 章节标题
+--
+
+文档属性为 `book` 时，文档可以有额外的 level 0 章节标题，这些额外的章节标题将被释义为部分（link:https://docs.asciidoctor.org/asciidoc/latest/sections/parts/[Part]）。如果至少存在一个额外的 Part，那么将默认使文档成为一本由多部分组成的书。
+
+[source]
+--
+= 文档标题 (Level 0)
+
+== Level 1 章节标题
+
+= Level 0 章节标题 (Part)
+
+== Level 1 章节标题
+
+=== Level 2 章节标题
+
+==== Level 3 章节标题
+
+===== Level 4 章节标题
+
+====== Level 5 章节标题
+
+= 另一个 Level 0 章节标题 (Part)
+--
+
+离散标题（Discrete heading，不成为章节标题）
+
+[source]
+--
+[discrete]
+=== 这是一个离散标题
+--
+
+== 自动目录
+
+要启用自动目录，请在文档标题下，添加 `:toc:` 这一属性条目。
+
+== 包括内容
+
+你可以使用 `include` 将特定文档的内容嵌入另一个文档中。如下：
+
+include::assets/example.adoc[]
+
+
+.按标记的区域或行包含内容
+ include::filename.txt[tag=definition]
+ include::filename.txt[lines=5..10]
+
+.包含来自 URL 的内容
+ include::https://raw.githubusercontent.com/asciidoctor/asciidoctor/main/README.adoc[]
+
+WARNING: 包含来自 URL 的内容具有潜在危险，因此如果安全模式为 SECURE 或更高，则禁用它。假设安全模式低于 SECURE，你还必须设置 `allow-uri-read` 属性以允许 AsciiDoc 处理器从 URL 读取内容。
+
+== 列表
+
+一个列表前后都需要空一行与其他内容分隔开来。
+
+你也可以通过在第二个列表上方添加一个空的属性列表（即 `[]`）或在第一个列表后插入一个空行，然后插入一个行注释（比如 `//-`）来强制分开两个相邻的列表。
+
+* Level 1 list item
+** Level 2 list item
+*** Level 3 list item
+**** Level 4 list item
+***** Level 5 list item
+****** etc.
+* Level 1 list item
+
+.这是一个有序列表
+. Step 1
+. Step 2
+.. Step 2a
+.. Step 2b
+. Step 3
+
+.有序列表最大层级嵌套
+. Level 1 list item
+.. Level 2 list item
+... Level 3 list item
+.... Level 4 list item
+..... Level 5 list item
+. Level 1 list item
+
+.检查清单
+* [ ] 待办事项
+* [x] 已办事项
+* [*] 已办事项
+* 常规的列表条目
+
+.说明列表样例
+物品一:: 物品一的描述
+物品二:: 
+物品二的描述。
+描述也可以单独一行开始。
+
+.问答清单
+[qanda]
+如何解决 XX 问题？::
+要解决这个问题首先要……
+
+采取某措施是否合理？::
+是否应该停止行动？::
+根据……，所以应当……
+
+.混合列表
+Operating Systems::
+  Linux:::
+    . Fedora
+      * Desktop
+    . Ubuntu
+      * Desktop
+      * Server
+  BSD:::
+    . FreeBSD
+    . NetBSD
+
+Cloud Providers::
+  PaaS:::
+    . OpenShift
+    . CloudBees
+  IaaS:::
+    . Amazon EC2
+    . Rackspace
+
+TIP: 列表可以缩进。前导空格并不重要。
+
+.大纲列表中的复杂内容
+* 每个列表项至少有一段内容，
+ 可以换行，甚至可以使用悬挂缩进。
++
+通过在两个块相邻的行上放置一个列表延续（list continuation）
+来连接其他段落或块。
++
+list continuation:: 单独一行的加号（`+`）
+
+* 文字段落不需要列表延续。
+
+ $ cd projects/my-book
+
+* AsciiDoc 列表可能包含任何复杂的内容。
++
+|===
+|列 1, 标题行|列 2, 标题行
+
+|列1，行1
+|列2，行1
+|===
+
+== 图像
 

@@ -18,3 +18,14 @@ TIP: 该列表是乱序的，建议使用 vscode 内置的搜索功能检索词�
 * custom role - 自定义角色
 * Autolinks - 自动链接
 * macro - 宏
+anchor:example-node[测试节点]
+* Document header - 文档标题
+* Section titles - 章节标题
+* Level - 章节标题层级
+* Discrete heading - 离散标题
+* TOC/Table of Contents - 目录
+* Unordered list - 无序列表
+* Ordered list - 有序列表
+* Checklist - 检查清单
+* Description list - 说明列表
+* Question and answer list - 问答清单
