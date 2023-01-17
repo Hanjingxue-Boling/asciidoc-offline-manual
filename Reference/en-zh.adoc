@@ -39,15 +39,16 @@ anchor:example-node[测试节点]
 * open block - 开放块
 * Blockquotes - 引用块
 * Passthrough block - 直通块
-*
-*
-*
-*
-*
-*
-*
-*
-*
+* Explicit section ID - 显式章节 ID
+* block options - 块选项
+* anchor - 锚点
+* Breaks - 分隔线
+* Page break - 分页符
+* substitutions - 文本替换
+* Escaping substitutions - 转义替换
+* inline passthrough - 内联直通
+* Bibliography - 参考书目
+* Footnotes - 脚注
 *
 *
 *

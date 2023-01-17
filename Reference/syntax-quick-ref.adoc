@@ -577,19 +577,327 @@ https://getfirefox.com[Get Firefox]!
 
 == ID、身份和选项
 
-.分配块 ID（anchor）和角色 role 的速记语法
-[#goals.incremental]
-* Goal 1
-* Goal 2
-
 [TIP]
 ====
 * 要使用速记语法指定多个角色，请用点号分隔它们。
 * 速记语法中 `id` 和 `role` 值的顺序无关紧要。
 ====
 
-.正式语法
-[id="goals",role="incremental"]
-* Goal 1
-* Goal 2
+====
+.分配块 ID（锚点，anchor）和角色 role 的速记语法
+  [#goals.incremental]
+  * Goal 1
+  * Goal 2
 
+.正式语法
+  [id="goals",role="incremental"]
+  * Goal 1
+  * Goal 2
+====
+
+.显式章节 ID（锚点）
+====
+[#null-values]
+== Primitive types and null values
+====
+
+.为内联文本分配 ID（锚点）和角色。
+====
+[#id-name.role-name]`monospace text`
+
+[#free-world.goals]*free the world*
+====
+
+====
+.分配块选项（block options）的速记语法
+[%header%footer%autowidth]
+|===
+|Header A |Header B
+|Footer A |Footer B
+|===
+
+.分配块选项的正式语法
+[options="header,footer,autowidth"]
+|===
+|Header A |Header B
+|Footer A |Footer B
+|===
+
+// options 可以缩写为 opts
+[opts="header,footer,autowidth"]
+|===
+|Header A |Header B
+|Footer A |Footer B
+|===
+====
+
+== 评论
+
+.评论行和评论块
+====
+  // 这是一行评论
+
+  ////
+  这是一个评论块
+
+  注意，它不是限定块（delimited block）
+  ////
+====
+
+== 分割线
+
+分隔线： +
+  '''
+
+分页符： +
+ <<<
+
+== 属性和替换
+
+.属性声明和使用
+====
+:url-home: https://asciidoctor.org
+:link-docs: https://asciidoctor.org/docs[文档]
+:summary: AsciiDoc 是一种成熟的纯文本文档格式，用于编写笔记、文章、文档、书籍等。 它还是一个文本处理器和工具链，用于将文档翻译成各种输出格式（即后端），包括 HTML、DocBook、PDF 和 ePub。
+
+查看 {url-home}[Asciidoctor]！
+
+{summary}
+
+请同时阅读 {link-docs} ！
+
+{checkedbox} 完成了！
+====
+
+要了解有关可用属性和替换组的更多信息，请参阅：
+
+* https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-ref/[Document Attributes Reference]
+* https://docs.asciidoctor.org/asciidoc/latest/attributes/character-replacement-ref/[Character Replacement Attributes Reference]
+* https://docs.asciidoctor.org/asciidoc/latest/subs/apply-subs-to-blocks/#subs-groups[Substitution Groups]
+
+.计数器属性
+====
+.Parts{counter2:index:0}
+|===
+|Part Id |Description
+
+|PX-{counter:index}
+|Description of PX-{index}
+
+|PX-{counter:index}
+|Description of PX-{index}
+|===
+====
+
+== 文本替换
+
+.文本符号替换
+[cols="1,1,1,1,3a"]
+|===
+|名称|语法|Unicode 替换|渲染效果|注意事项
+
+|版权
+|\(C)
+|\&#169;
+|©
+|
+
+|已注册的
+|\(R)
+|\&#174;
+|®
+|
+
+|商标
+|\(TM)
+|\&#8482;
+|™
+|
+
+
+|长破折号（Em dash）
+|\--
+|\&#8212;
+|—
+|仅在两个单词字符之间、单词字符和行边界之间或两侧有空格时才被替换。 +
+当两侧有空格字符（例如，a \-- b）时，普通空格将替换为细空格 (\&#8201;)。
+
+|省略号
+|\...
+|\&#8230;
+|…​
+|
+
+|单个向右箭头
+|\->
+|\&#8594;
+|→
+|
+
+|双向右箭头
+|\=>
+|\&#8658;
+|⇒
+|
+
+|单个向右箭头
+|\<-
+|\&#8592;
+|←
+|
+
+|双向左箭头
+|\<=
+|\&#8656;
+|⇐
+|
+
+|排版撇号（Typographic apostrophe）
+|Sam\'s
+|Sam\&#8217;s
+|Sam’s
+|打字机撇号被印刷撇号取代。
+|===
+
+== 转义替换
+
+.反斜杠
+====
+如 /items/\{id}，id 属性没有被替换。 +
+它周围的花括号得到了保留
+
+\*Stars* 没有显示为粗体 +
+它周围的星号得到了保留
+
+\&sect; 显示为实体引用 +
+它不会转换为节符号 (&sect;).
+
+\=> 反斜杠防止等号后跟大于号组合形成双箭头字符 (=>).
+
+\[[Word]] 不会被释义为一个锚点。 +
+它周围的双括号被保留。
+
+[\[[Word]]] 不被解释为书目锚点。 +
+它周围的三重括号被保留下来。
+
+\https://example.org 不会转换为可点击的 URL 链接。
+====
+
+.使用单双加号实现内联直通（inline passthrough）
+====
+在一对加号文本或词组，如 +/user/{id}+ 不会被替换。 +
+然而，类似 +<+ 和 +>+ 的特殊字符仍然是在输出中转义。
+
+在文本内引用的属性，如 dev++{conf}++，不会被替换。
+
+加号传递将转义独立格式标记，
+====
+
+.使用三加号内联直通和内联传递宏
+====
++++<u>underline me</u>+++ is underlined.
+
+pass:[<u>underline me</u>] is also underlined.
+====
+
+== 参考引用
+
+====
+
+_The Pragmatic Programmer_ <<pp>> should be required reading for all developers.
+To learn all about design patterns, refer to the book by the "`Gang of Four`" <<gof>>.
+
+[bibliography]
+== References
+
+* [[[pp]]] Andy Hunt & Dave Thomas. The Pragmatic Programmer:
+From Journeyman to Master. Addison-Wesley. 1999.
+* [[[gof,gang]]] Erich Gamma, Richard Helm, Ralph Johnson & John Vlissides.
+Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley. 1994.
+
+====
+
+== 脚注
+
+.普通脚注和可复用的脚注
+====
+
+这是一段文本。footnote:[这是一段脚注]
+
+这是一段footnote:test[这一段可复用的脚注]文本。
+
+这是footnote:test[]第三段文本。
+====
+
+== markdown 兼容性
+
+CAUTION: 并不建议使用如下的语法
+
+Markdown 兼容语法是 AsciiDoc 语言的可选功能，目前仅在使用 Asciidoctor 时可用。
+
+.Markdown 样式的标题
+[source]
+--
+# Document Title (Level 0)
+
+## Section Level 1
+
+### Section Level 2
+
+#### Section Level 3
+
+##### Section Level 4
+
+###### Section Level 5
+--
+
+.带语法高亮的围栏代码块
+[source]
+--
+```ruby
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+```
+--
+
+.Markdown 样式的块引用
+[source]
+--
+> I hold it that a little rebellion now and then is a good thing,
+> and as necessary in the political world as storms in the physical.
+> -- Thomas Jefferson, Papers of Thomas Jefferson: Volume 11
+--
+
+.带有块内容的 Markdown 样式块引用
+[source]
+--
+> > What's new?
+>
+> I've got Markdown in my AsciiDoc!
+>
+> > Like what?
+>
+> * Blockquotes
+> * Headings
+> * Fenced code blocks
+>
+> > Is there more?
+>
+> Yep. AsciiDoc and Markdown share a lot of common syntax already.
+--
+
+Markdown 样式的分隔线
+
+[source]
+--
+---
+
+- - -
+
+***
+
+* * *
+--
