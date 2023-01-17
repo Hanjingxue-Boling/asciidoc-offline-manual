@@ -2,13 +2,15 @@
 Hanjingxue Boling <bolingh@outlook.com>
 v0.2-alpha, 2023-01-17
 
-== 项目产生的原因
-
 WARNING: 由于本项目属于下游项目，必然滞后于官方手册的更新进度。有异议的地方以官方手册为准。
 
-由于官方并未提供切实可用的，离线的文档或用户手册。所以我创建了此项目，以方便我个人使用 AsciiDoc。
+CAUTION: AsciiDoc 离线手册处于早期 alpha 阶段，仍有许多内容尚未完善。
 
-本项目包含了一些使用 AsciiDoc 书写而成的，由英文译为中文的用户手册页，可用于离线查阅。
+== 项目产生的原因
+
+. 虽然 AsciiDoc 的在线文档已经很详尽了。但开发者们并没有提供切实可用的，离线的文档或用户手册。
+. AsciiDoc 比 markdown 更为复杂，在不熟悉 AsciiDoc 语法的情况下，时常需要去查阅一下在线文档。
+. 将常用的文档和用户手册页翻译，整理成中文，方便我离线使用。
 
 == 如何使用
 
@@ -16,7 +18,7 @@ WARNING: 由于本项目属于下游项目，必然滞后于官方手册的更�
 
 更多内容另见：link:index.adoc[目录]
 
-我并不建议使用 GitHub 的在线预览功能浏览本文档，虽然 AsciiDoc 也是 GitHub 支持的标记语言之一，但是有些样式 GitHub 简单的在线预览无法实现，而且部分样例将以源码的形式进行举例。
+TIP: 我并不建议使用 GitHub 的在线预览功能浏览本文档，虽然 AsciiDoc 也是 GitHub 支持的标记语言之一，但是有些样式 GitHub 简单的在线预览无法实现，而且部分样例将以源码的形式进行举例。
 
 == 其他
 
@@ -27,5 +29,7 @@ WARNING: 由于本项目属于下游项目，必然滞后于官方手册的更�
 === 许可证
 
 TIP: 详细说明另见 link:license-list.adoc[许可证清单]
+
+本手册页项目基于 link:https://docs.asciidoctor.org/[asciidoc-docs] 进行编写，并对其进行了诸多改动。上游源文件采用 link:https://github.com/asciidoctor/asciidoc-docs/blob/main/LICENSE[CC-BY 4.0] 进行授权使用。
 
 本手册页项目基于 link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0] 进行授权分发。

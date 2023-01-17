@@ -1,5 +1,7 @@
 = 许可证清单
 
+本手册页项目基于 link:https://docs.asciidoctor.org/[asciidoc-docs] 进行编写，并对其进行了诸多改动。上游源文件采用 link:https://github.com/asciidoctor/asciidoc-docs/blob/main/LICENSE[CC-BY 4.0] 进行授权使用。
+
 如果没有特别声明，本项目的全部文件将以 link:https://creativecommons.org/licenses/by-sa/4.0/[CC-BY-SA 4.0] 进行授权分发。
 
 == 例外情况

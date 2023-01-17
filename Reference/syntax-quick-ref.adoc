@@ -444,3 +444,152 @@ IMPORTANT: 这是一个重要信息段落。
 
 == 更多的分隔块
 
+任何块（block）都可以有一个标题。块标题是使用块上方以点号开头的一行文本定义的。该点号后面不能跟空格。对于块图像，标题显示在块下方。对于所有其他块，标题通常显示在其上方。
+
+.侧边栏块（Sidebar block）
+****
+这是一个示例的侧边栏块。
+
+侧边栏用于在视觉上分隔补充正文的辅助内容。
+****
+
+.示例块
+====
+这是一个简单的 AsciiDoc 文档：
+
+----
+= 文章标题
+作者
+:toc:
+
+这是一段示例文本
+----
+
+文档标题不是必须的，但很有用。
+====
+
+.引用块
+====
+
+[quote,班杰明•帕克,《蜘蛛侠》电影登场人物]
+____
+With great power comes great responsibility.
+____
+
+[quote,班杰明•帕克]
+With great power comes great responsibility.
+
+____
+With great power comes great responsibility.
+____
+
+"With great power comes great responsibility."
+-- 班杰明•帕克, 蜘蛛侠》电影登场人物
+====
+
+--
+一个开放块（open block）可以是一个匿名容器，
+或者它可以伪装成任何其他块。
+--
+
+[source]
+--
+sudo zypper clean -a && sudo zypper dup -y
+--
+
+.直通块
+++++
+<p>
+直通块中的内容<em>未经处理</em>就传递到输出。这意味着你可以包含原始 HTML。
+</p>
+
+<center>
+这样你就能实现一些基于 HTML 的样式效果。
+</center>
+++++
+
+== 表格
+
+.示例表格
+|===
+|第一行，第一列|第一行，第二列
+
+|第二行，第一列
+|第二行，第二列
+
+|第三行，第一列
+|第三行，第二列
+|===
+
+除非特意指定 `cols` 属性，否则表格第一行的分隔符数量将决定表格的列数。
+
+当表格的第一行后存在空行时，第一行的单元格将自动变成表格标题
+
+.包含两列、一个标题行和两行内容的表格
+[%header,cols=2*] 
+|===
+|第一列
+|第二列
+
+|第二行，第一列
+|第二行，第二列
+
+|第三行，第一列
+|第三行，第二列
+|===
+
+`cols` 属性中的 * 是重复运算符。这意味着在其余列（column）中重复列规范。在这种情况下，我们在 2 列中重复默认格式。当表头中的单元格未在一行（row）中定义时，必须使用 `cols` 属性设置表中的列数，并使用 `%header` 选项（或 `options=header` 属性）将第一行提升为表头。
+
+.Applications
+[cols="1,1,2"] 
+|===
+|Name |Category |Description
+
+|Firefox
+|Browser
+|Mozilla Firefox is an open source web browser.
+It's designed for standards compliance,
+performance, portability.
+
+|Arquillian
+|Testing
+|An innovative and highly extensible testing platform.
+Empowers developers to easily create real, automated tests.
+|===
+
+在此示例中，`cols` 属性具有两个功能。它指定此表具有三列，并设置它们的相对宽度（1:1:2）。
+
+.包含 AsciiDoc 内容的列的表格
+[cols="2,2,5a"]
+|===
+|Firefox
+|Browser
+|Mozilla Firefox is an open source web browser.
+
+It's designed for:
+
+* standards compliance
+* performance
+* portability
+
+https://getfirefox.com[Get Firefox]!
+|===
+
+== ID、身份和选项
+
+.分配块 ID（anchor）和角色 role 的速记语法
+[#goals.incremental]
+* Goal 1
+* Goal 2
+
+[TIP]
+====
+* 要使用速记语法指定多个角色，请用点号分隔它们。
+* 速记语法中 `id` 和 `role` 值的顺序无关紧要。
+====
+
+.正式语法
+[id="goals",role="incremental"]
+* Goal 1
+* Goal 2
+
