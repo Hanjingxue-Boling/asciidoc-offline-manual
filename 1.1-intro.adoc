@@ -1,6 +1,9 @@
-= AsciiDoc 语言文档
+:toc: auto
+:doctype: book
 
-== 关于 AsciiDoc
+== AsciiDoc 语言文档
+
+=== 关于 AsciiDoc
 
 AsciiDoc 是一种轻量级语义标记语言，主要用于编写技术文档。该语言可用于生成各种演示丰富的输出格式，所有这些格式都来自以简洁、人类可读的纯文本格式编码的内容。
 

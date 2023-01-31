@@ -1,4 +1,7 @@
-= 文档处理
+:toc: auto
+:doctype: book
+
+== 文档处理
 
 AsciiDoc 是一种专门的写作格式，而不是一种出版格式。换句话说，它不像你在文字处理器中写作时那样所见即所得。相反，你所写的是 AsciiDoc 的源码。然后你使用 AsciiDoc 处理器，如 Asciidoctor，将 AsciiDoc 源文件转换成可发布的格式。你所要发布的文件就是这种输出。
 
