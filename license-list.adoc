@@ -1,4 +1,5 @@
 = 许可证清单
+:imagesdir: images
 
 本手册页项目基于 link:https://docs.asciidoctor.org/[asciidoc-docs] 进行编写，并对其进行了诸多改动。上游源文件采用 link:https://github.com/asciidoctor/asciidoc-docs/blob/main/LICENSE[CC-BY 4.0] 进行授权使用。
 
@@ -6,6 +7,6 @@
 
 == 例外情况
 
-. image:./Reference/images/geko.jpg[geko,240,160]
+. image:geko.jpg[geko,240,160]
 +
 由 link:https://www.flickr.com/photos/fotokobra/[Hans Nater] 基于 link:https://creativecommons.org/licenses/by-nd/2.0/[CC-BY-SA 2.0] 进行授权使用。

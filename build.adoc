@@ -6,12 +6,4 @@ include::0-self-intro.adoc[]
 
 include::1.1-intro.adoc[]
 
-include::1.2-Document-Structure.adoc[]
-
-include::1.3-Key-Concepts.adoc[]
-
-include::1.4-Document-Processing.adoc[]
-
-include::1.5-Normalization.adoc[]
-
 include::2.1-intro.adoc[]

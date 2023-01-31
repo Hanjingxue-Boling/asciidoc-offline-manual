@@ -1,4 +1,13 @@
-== 前言
+= 前言
 :toc: auto
 :doctype: book
 
+**《AsciiDoc 离线手册》**是一本用于查阅 link:https://docs.asciidoctor.org/[AsciiDoc 文档]的帮助手册。
+
+== 项目产生的原因
+
+. 虽然 AsciiDoc 的在线文档已经很详尽了。但开发者们并没有提供切实可用的，离线的文档或用户手册。
+. AsciiDoc 比 markdown 更为复杂，在不熟悉 AsciiDoc 语法的情况下，时常需要去查阅一下在线文档。
+. 将常用的文档和用户手册页翻译，整理成中文，方便我离线使用。
+
+更多详情详见：link:README.adoc[]
