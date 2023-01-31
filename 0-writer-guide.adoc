@@ -1,0 +1,42 @@
+= AsciiDoc 写作指南
+:toc: auto
+:imagesdir: images
+:doctype: book
+
+本指南简要介绍了 AsciiDoc，一种纯文本文档语法和处理器。本简介适用于希望减少编写和发布内容所需工作量的任何人，无论是技术文档、文章、网页还是优秀的老式散文。
+
+TIP: 如果你想了解 AsciiDoc 是怎么回事，请在link:https://docs.asciidoctor.org/asciidoc/latest/#about-asciidoc[关于 AsciiDoc] 中寻找答案。如果你正在寻找 AsciiDoc 语法的简明概览，请参阅 link:0-syntax-quick-ref.adoc[《AsciiDoc 语法快速参考》]。
+
+在本指南中，你将了解：
+
+* AsciiDoc 文档的基本结构
+* 如何创建你的第一个 AsciiDoc 文档
+* 如何添加其他结构元素，例如列表、块引用和源代码
+* 如何将 AsciiDoc 文档转换为 HTML、DocBook 和 PDF
+
+除了涵盖 AsciiDoc 基础知识之外，本指南还建议了一组约定，以帮助你创建更一致的文档并最大限度地提高你的写作效率。
+
+让我们深入了解 AsciiDoc 吧！
+
+== 用 AsciiDoc 写作
+
+本节的目标是教你如何编写你的第一个 AsciiDoc 文档。希望当你回头看时，你会同意这是有意义的。
+
+你与 AsciiDoc 冒险始于你最喜欢的文本编辑器。
+
+=== 它只是文本，伙计。
+
+由于 AsciiDoc 语法只是纯文本，你可以使用任何文本编辑器编写 AsciiDoc 文档。你不需要复杂的文字处理程序，如 Microsoft Word、OpenOffice Writer 或 Google Docs。事实上，你不应该使用这些程序，因为它们会给你的文档增加（你看不到的）麻烦并使转换变得乏味。
+
+TIP: 虽然任何文本编辑器都可以，但我建议选择一个支持 AsciiDoc 语法高亮的编辑器。颜色给文本带来对比，使其更容易阅读。高亮显示还可以确认你为内联或块元素输入了正确的语法。
+
+在 macOS 上编辑纯文本最流行的应用程序是 **TextMate**。Linux 上类似的选择是 **GEdit**。在 Windows 上，请远离记事本footnote:[https://en.wikipedia.org/wiki/Windows_Notepad]和写字板footnote:[https://en.wikipedia.org/wiki/WordPad]，因为它们生成的纯文本对跨平台不友好。你可以选择像 **link:https://kate-editor.org/[Kate]** 这样的功能强大的文本编辑器。如果你是一名程序员（或内心极客的作家），你可能会更喜欢 **Vim**、**Emacs**、**VS Code** 或 **Sublime Text**，它们都可以跨平台使用。所有这些编辑器共有的关键特性是 AsciiDoc 的语法高亮显示。
+
+打开你最喜欢的文本编辑器，准备好写一些 AsciiDoc！
+
+=== 内容为王！
+
+文档中的大部分内容是段落文本。这就是 Asciidoctor 不需要任何特殊标记或属性来指定段落内容的原因。你可以直接开始打字了。
+
+在 Asciidoctor 中，相邻或连续的文本行构成一个段落元素。要在另一个元素（例如章节标题或表格）之后开始一个新段落，请按两次 `Enter` 键以插入一个空行，然后继续输入内容。
+
