@@ -31,7 +31,7 @@ anchor:example-node[测试节点]
 * Question and answer list - 问答清单
 * Literals - 文本文字
 * callout - 调用
-* Admonitions - 告诫
+* Admonition - 告诫
 * block - 块
 * block title -块标题
 * Sidebar block - 侧边栏块
@@ -52,7 +52,7 @@ anchor:example-node[测试节点]
 * block macros - 块宏
 * Verbatim text - 逐字文本
 * preamble - 前言
-*
+* content model - 内容模型
 *
 *
 *

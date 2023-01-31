@@ -6,4 +6,4 @@ include::0-self-intro.adoc[]
 
 include::1.1-intro.adoc[]
 
-include::2.1-intro.adoc[]
+include::2.1-index.adoc[]

@@ -1,6 +1,6 @@
 = AsciiDoc 离线手册
 Hanjingxue Boling <bolingh@outlook.com>
-v0.2-alpha, 2023-01-17
+v0.3-alpha, 2023-01-31
 
 WARNING: 由于本项目属于下游项目，必然滞后于官方手册的更新进度。有异议的地方以官方手册为准。
 
@@ -20,9 +20,13 @@ CAUTION: AsciiDoc 离线手册处于早期 alpha 阶段，仍有许多内容尚�
 
 TIP: 我并不建议使用 GitHub 的在线预览功能浏览本文档，虽然 AsciiDoc 也是 GitHub 支持的标记语言之一，但是有些样式 GitHub 简单的在线预览无法实现，而且部分样例将以源码的形式进行举例。
 
+== 其他
+
+=== EPUB 支持
+
 WARNING: 目前你可以在 link:https://github.com/Hanjingxue-Boling/asciidoc-offline-manual/releases[GitHub Release] 上获取早期测试版本的 EPUB 电子书文件。但此文件目前仅用于预览用途。
 
-== 其他
+目前我打算将 AsciiDoc 的文档翻译完成后，打包成一个 epub 文件。对于快速索引所包含的文件可能会单独进行构建。
 
 === 排版样式
 
@@ -30,7 +34,7 @@ WARNING: 目前你可以在 link:https://github.com/Hanjingxue-Boling/asciidoc-o
 
 === 许可证
 
-TIP: 详细说明另见 link:license-list.adoc[许可证清单]
+TIP: 详细说明另见 link:0-license-list.adoc[许可证清单]
 
 本手册页项目基于 link:https://docs.asciidoctor.org/[asciidoc-docs] 进行编写，并对其进行了诸多改动。上游源文件采用 link:https://github.com/asciidoctor/asciidoc-docs/blob/main/LICENSE[CC-BY 4.0] 进行授权使用。
 

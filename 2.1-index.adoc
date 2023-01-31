@@ -1,0 +1,5 @@
+= 块
+:toc: auto
+:doctype: book
+
+include::2.2-intro.adoc[]
