@@ -16,9 +16,11 @@ CAUTION: AsciiDoc 离线手册处于早期 alpha 阶段，仍有许多内容尚�
 
 本文档的绝大部分文件是 AsciiDoc 文档文件，建议使用 link:https://code.visualstudio.com/[VS code] 和 link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc] 阅读本手册。
 
-更多内容另见：link:index.adoc[目录]
+更多内容另见：link:index.adoc[目录] 或 link:build.adoc[构建索引]。
 
 TIP: 我并不建议使用 GitHub 的在线预览功能浏览本文档，虽然 AsciiDoc 也是 GitHub 支持的标记语言之一，但是有些样式 GitHub 简单的在线预览无法实现，而且部分样例将以源码的形式进行举例。
+
+WARNING: 目前你可以在 link:https://github.com/Hanjingxue-Boling/asciidoc-offline-manual/releases[GitHub Release] 上获取早期测试版本的 EPUB 电子书文件。但此文件目前仅用于预览用途。
 
 == 其他
 

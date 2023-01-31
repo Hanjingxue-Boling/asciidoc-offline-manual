@@ -1,27 +1,21 @@
 = 目录
 :toc: auto
 
-== AsciiDoc 简介
+== 简介
 
-link:01-Introduction/01-intro.adoc[AsciiDoc 简介]
-
-link:01-Introduction/02-Document-Structure.adoc[文档结构]
-
-link:01-Introduction/03-Key-Concepts.adoc[重要概念]
-
-link:01-Introduction/04-Document-Processing.adoc[文档处理]
+link:1.1-intro.adoc[AsciiDoc 简介]
 
 == 块
 
-link:02-Blocks/01-intro.adoc[简介]
+link:2.1-intro.adoc[简介]
 
 == 参考
 
-link:Reference/syntax-quick-ref.adoc[AsciiDoc 语法快速参考]
+link:0-syntax-quick-ref.adoc[AsciiDoc 语法快速参考]
 
-link:Reference/en-zh.adoc[中英术语对照表]
+link:0-en-zh.adoc[中英术语对照表]
 
-link:Reference/Glossary.adoc[术语表]
+link:0-glossary.adoc[术语表]
 
 == 根目录文件
 
@@ -29,5 +23,5 @@ link:readme.adoc[README]
 
 link:LICENSE[CC-BY-SA 4.0 许可证副本]
 
-link:license-list.adoc[许可证清单]
+link:0-license-list.adoc[许可证清单]
 
