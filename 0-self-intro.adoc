@@ -10,4 +10,4 @@
 . AsciiDoc 比 markdown 更为复杂，在不熟悉 AsciiDoc 语法的情况下，时常需要去查阅一下在线文档。
 . 将常用的文档和用户手册页翻译，整理成中文，方便我离线使用。
 
-更多详情详见：link:README.adoc[]
+更多详情详见：link:https://github.com/Hanjingxue-Boling/asciidoc-offline-manual/blob/master/readme.adoc[README^]
