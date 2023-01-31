@@ -1,5 +1,6 @@
 = 块的简介
 :toc: auto
+:doctype: book
 
 块元素构成了 AsciiDoc 文档的主要结构，首先是文档本身。
 
