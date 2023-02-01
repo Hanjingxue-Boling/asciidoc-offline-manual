@@ -1,6 +1,7 @@
 = AsciiDoc 离线手册
 :toc: auto
 :doctype: book
+:toclevels: 4
 
 include::0-self-intro.adoc[]
 

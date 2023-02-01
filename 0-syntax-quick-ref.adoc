@@ -109,7 +109,7 @@ anchor:bookmark-c[]使用交叉引用链接到此位置。
 
 例如，文档间交叉引用：
 
-link:en-zh.adoc#example-node[测试节点]
+link:0-en-zh.adoc#example-node[测试节点]
 
 == 文档标题
 
